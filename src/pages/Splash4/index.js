@@ -8,7 +8,7 @@ const Splash4 = () => {
       logo={Search}
       title="Berita"
       desc="Menampilkan tips perawatan motor"
-      nav="Splash1"
+      nav="Login"
     />
   );
 };

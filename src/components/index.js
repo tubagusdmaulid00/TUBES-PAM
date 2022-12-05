@@ -1,2 +1,3 @@
 import Splash from './Splash';
-export {Splash};
+import Input from './Input';
+export {Splash, Input};

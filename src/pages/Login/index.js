@@ -46,7 +46,9 @@ const Login = () => {
           placeholder={'Enter Password'}
           type={'password'}
         />
-        <Text style={styles.forget}>Lupa Password?</Text>
+        <TouchableOpacity onPress={() => navigation.navigate('ForgetPassword')}>
+          <Text style={styles.forget}>Lupa Password?</Text>
+        </TouchableOpacity>
         <TouchableOpacity style={styles.button}>
           <Text style={{color: 'white'}}>Masuk</Text>
         </TouchableOpacity>

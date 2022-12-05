@@ -12,6 +12,11 @@ import {
   Signup,
   Konfirmasi,
   FinalSignup,
+  ForgetPassword,
+  ForgetPasswordv2,
+  KonfirmasiForgetPassword,
+  ChangePasswordForgetPassword,
+	FinalChangePassword
 } from '../pages';
 
 const Stack = createNativeStackNavigator();
@@ -31,6 +36,47 @@ const Router = () => {
         <Stack.Screen name="Signup" component={Signup} />
         <Stack.Screen name="Konfirmasi" component={Konfirmasi} />
         <Stack.Screen name="FinalSignup" component={FinalSignup} />
+        <Stack.Screen
+          name="ForgetPassword"
+          component={ForgetPassword}
+          options={{
+            title: 'Lupa Password',
+            headerShown: true,
+            headerStyle: {backgroundColor: '#FF7A00'},
+            headerTintColor: '#fff',
+          }}
+        />
+        <Stack.Screen
+          name="ForgetPasswordv2"
+          component={ForgetPasswordv2}
+          options={{
+            title: 'Lupa Password',
+            headerShown: true,
+            headerStyle: {backgroundColor: '#FF7A00'},
+            headerTintColor: '#fff',
+          }}
+        />
+        <Stack.Screen
+          name="KonfirmasiForgetPassword"
+          component={KonfirmasiForgetPassword}
+          options={{
+            title: 'Konfirmasi',
+            headerShown: true,
+            headerStyle: {backgroundColor: '#FF7A00'},
+            headerTintColor: '#fff',
+          }}
+        />
+				<Stack.Screen
+          name="ChangePasswordForgetPassword"
+          component={ChangePasswordForgetPassword}
+          options={{
+            title: 'Password Baru',
+            headerShown: true,
+            headerStyle: {backgroundColor: '#FF7A00'},
+            headerTintColor: '#fff',
+          }}
+        />
+				<Stack.Screen name="FinalChangePassword" component={FinalChangePassword} />
       </Stack.Navigator>
     </NavigationContainer>
   );

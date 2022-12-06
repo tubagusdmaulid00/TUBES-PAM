@@ -49,7 +49,9 @@ const Login = () => {
         <TouchableOpacity onPress={() => navigation.navigate('ForgetPassword')}>
           <Text style={styles.forget}>Lupa Password?</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('HomeTab')}>
           <Text style={{color: 'white'}}>Masuk</Text>
         </TouchableOpacity>
         <SafeAreaView

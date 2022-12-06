@@ -12,6 +12,10 @@ import ForgetPasswordv2 from './ForgetPasswordv2';
 import KonfirmasiForgetPassword from './KonfirmasiForgetPassword';
 import ChangePasswordForgetPassword from './ChangePasswordForgetPassword';
 import FinalChangePassword from './FinalChangePassword';
+import Beranda from './Beranda';
+import Bengkel from './Bengkel';
+import Aktivitas from './Aktivitas';
+import Profile from './Profile';
 export {
   Splash1,
   Splash2,
@@ -27,4 +31,8 @@ export {
   KonfirmasiForgetPassword,
   ChangePasswordForgetPassword,
   FinalChangePassword,
+  Beranda,
+  Bengkel,
+  Aktivitas,
+  Profile,
 };

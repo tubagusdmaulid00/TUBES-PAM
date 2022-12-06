@@ -2,6 +2,9 @@
 import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import {
   Splash1,
   Splash2,
@@ -16,17 +19,83 @@ import {
   ForgetPasswordv2,
   KonfirmasiForgetPassword,
   ChangePasswordForgetPassword,
-	FinalChangePassword
+  FinalChangePassword,
+  Beranda,
+  Bengkel,
+  Aktivitas,
+  Profile,
 } from '../pages';
 
 const Stack = createNativeStackNavigator();
+
+const Tab = createBottomTabNavigator();
+
+function HomeTab() {
+  return (
+    <Tab.Navigator
+      initialRouteName="Beranda"
+      screenOptions={{
+        tabBarActiveTintColor: '#e91e63',
+        headerShown: false,
+      }}>
+      <Tab.Screen
+        name="Beranda"
+        component={Beranda}
+        options={{
+          tabBarLabel: 'Beranda',
+          tabBarIcon: ({color, size}) => (
+            <MaterialCommunityIcons name="home" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Aktivitas"
+        component={Aktivitas}
+        options={{
+          tabBarLabel: 'Aktivitas',
+          tabBarIcon: ({color, size}) => (
+            <MaterialCommunityIcons
+              name="notebook-edit-outline"
+              color={color}
+              size={size}
+            />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Bengkel"
+        component={Bengkel}
+        options={{
+          tabBarLabel: 'Bengkel',
+          tabBarIcon: ({color, size}) => (
+            <SimpleLineIcons name="location-pin" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Profile"
+        component={Profile}
+        options={{
+          tabBarLabel: 'Profile',
+          tabBarIcon: ({color, size}) => (
+            <MaterialCommunityIcons
+              name="account-circle-outline"
+              color={color}
+              size={size}
+            />
+          ),
+        }}
+      />
+    </Tab.Navigator>
+  );
+}
 
 const Router = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{headerShown: false}}
-        initialRouteName="Splash1">
+        initialRouteName="HomeTab">
         <Stack.Screen name="Splash1" component={Splash1} />
         <Stack.Screen name="Splash2" component={Splash2} />
         <Stack.Screen name="Splash3" component={Splash3} />
@@ -36,6 +105,7 @@ const Router = () => {
         <Stack.Screen name="Signup" component={Signup} />
         <Stack.Screen name="Konfirmasi" component={Konfirmasi} />
         <Stack.Screen name="FinalSignup" component={FinalSignup} />
+        <Stack.Screen name="HomeTab" component={HomeTab} />
         <Stack.Screen
           name="ForgetPassword"
           component={ForgetPassword}
@@ -66,7 +136,7 @@ const Router = () => {
             headerTintColor: '#fff',
           }}
         />
-				<Stack.Screen
+        <Stack.Screen
           name="ChangePasswordForgetPassword"
           component={ChangePasswordForgetPassword}
           options={{
@@ -76,7 +146,10 @@ const Router = () => {
             headerTintColor: '#fff',
           }}
         />
-				<Stack.Screen name="FinalChangePassword" component={FinalChangePassword} />
+        <Stack.Screen
+          name="FinalChangePassword"
+          component={FinalChangePassword}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

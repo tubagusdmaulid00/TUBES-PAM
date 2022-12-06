@@ -19,6 +19,7 @@ import Profile from './Profile';
 import TambahMotor from './TambahMotor';
 import Service from './Service';
 import DetailService from './DetailService';
+import Sparepart from './Sparepart';
 export {
   Splash1,
   Splash2,
@@ -41,4 +42,5 @@ export {
   TambahMotor,
   Service,
   DetailService,
+  Sparepart,
 };

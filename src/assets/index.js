@@ -12,6 +12,10 @@ import location from './location.png';
 import scooter from './scooter.png';
 import Motor from './Motor.png';
 import Iconmotor from './Iconmotor.png';
+import Oil from './Oil.png';
+import OilImage from './OilImage.png';
+import Sparepartimage from './Sparepartimage.png';
+import AccImage from './AccImage.png';
 export {
   Logo,
   Parking,
@@ -27,4 +31,8 @@ export {
   scooter,
   Motor,
   Iconmotor,
+  Oil,
+  OilImage,
+  Sparepartimage,
+  AccImage,
 };

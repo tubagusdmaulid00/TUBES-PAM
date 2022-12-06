@@ -25,8 +25,9 @@ import {
   Aktivitas,
   Profile,
   TambahMotor,
-	Service,
-	DetailService
+  Service,
+  DetailService,
+  Sparepart,
 } from '../pages';
 
 const Stack = createNativeStackNavigator();
@@ -89,6 +90,7 @@ function HomeTab() {
           ),
         }}
       />
+			
     </Tab.Navigator>
   );
 }
@@ -98,7 +100,7 @@ const Router = () => {
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{headerShown: false}}
-        initialRouteName="HomeTab">
+        initialRouteName="Splash1">
         <Stack.Screen name="Splash1" component={Splash1} />
         <Stack.Screen name="Splash2" component={Splash2} />
         <Stack.Screen name="Splash3" component={Splash3} />
@@ -163,7 +165,7 @@ const Router = () => {
             headerTintColor: '#fff',
           }}
         />
-				<Stack.Screen
+        <Stack.Screen
           name="Service"
           component={Service}
           options={{
@@ -173,11 +175,21 @@ const Router = () => {
             headerTintColor: '#fff',
           }}
         />
-				<Stack.Screen
+        <Stack.Screen
           name="DetailService"
           component={DetailService}
           options={{
             title: 'Detail Service',
+            headerShown: true,
+            headerStyle: {backgroundColor: '#FF7A00'},
+            headerTintColor: '#fff',
+          }}
+        />
+				<Stack.Screen
+          name="Sparepart"
+          component={Sparepart}
+          options={{
+            title: 'Sparepart',
             headerShown: true,
             headerStyle: {backgroundColor: '#FF7A00'},
             headerTintColor: '#fff',

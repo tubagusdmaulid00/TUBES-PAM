@@ -41,7 +41,9 @@ const Beranda = () => {
               <Image source={wrench} />
               <Text style={styles.titleicon}>Service</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.kotak}>
+            <TouchableOpacity
+              style={styles.kotak}
+              onPress={() => navigation.navigate('Sparepart')}>
               <Image source={Sparepart} />
               <Text style={styles.titleicon}>Sparepart</Text>
             </TouchableOpacity>

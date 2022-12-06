@@ -51,7 +51,6 @@ const TambahMotor = () => {
           onPress={() => navigation.navigate('HomeTab')}
           title="Selesai"
           color="#FF7A00"
-          accessibilityLabel="Learn more about this purple button"
         />
       </SafeAreaView>
     </SafeAreaView>
@@ -76,8 +75,8 @@ const styles = StyleSheet.create({
     width: 220,
   },
   footer: {
-		flex: 1,
-		justifyContent:'flex-end',
-		marginBottom:10,
-	},
+    flex: 1,
+    justifyContent: 'flex-end',
+    marginBottom: 10,
+  },
 });

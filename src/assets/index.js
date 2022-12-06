@@ -10,6 +10,8 @@ import Sparepart from './Sparepart.png';
 import newspaper from './newspaper.png';
 import location from './location.png';
 import scooter from './scooter.png';
+import Motor from './Motor.png';
+import Iconmotor from './Iconmotor.png';
 export {
   Logo,
   Parking,
@@ -23,4 +25,6 @@ export {
   newspaper,
   location,
   scooter,
+  Motor,
+  Iconmotor,
 };

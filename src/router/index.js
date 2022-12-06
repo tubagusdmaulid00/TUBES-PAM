@@ -24,7 +24,9 @@ import {
   Bengkel,
   Aktivitas,
   Profile,
-	TambahMotor
+  TambahMotor,
+	Service,
+	DetailService
 } from '../pages';
 
 const Stack = createNativeStackNavigator();
@@ -151,11 +153,31 @@ const Router = () => {
           name="FinalChangePassword"
           component={FinalChangePassword}
         />
-				<Stack.Screen
+        <Stack.Screen
           name="TambahMotor"
           component={TambahMotor}
           options={{
             title: 'Tambah Motor',
+            headerShown: true,
+            headerStyle: {backgroundColor: '#FF7A00'},
+            headerTintColor: '#fff',
+          }}
+        />
+				<Stack.Screen
+          name="Service"
+          component={Service}
+          options={{
+            title: 'Motor',
+            headerShown: true,
+            headerStyle: {backgroundColor: '#FF7A00'},
+            headerTintColor: '#fff',
+          }}
+        />
+				<Stack.Screen
+          name="DetailService"
+          component={DetailService}
+          options={{
+            title: 'Detail Service',
             headerShown: true,
             headerStyle: {backgroundColor: '#FF7A00'},
             headerTintColor: '#fff',

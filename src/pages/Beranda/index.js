@@ -13,6 +13,7 @@ import {
   newspaper,
   location,
   scooter,
+  Motor,
 } from '../../assets';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {useNavigation} from '@react-navigation/native';
@@ -34,7 +35,9 @@ const Beranda = () => {
         <SafeAreaView style={styles.image}>
           <Image source={Logo} style={styles.logo} />
           <SafeAreaView style={{flexDirection: 'row'}}>
-            <TouchableOpacity style={styles.kotak}>
+            <TouchableOpacity
+              style={styles.kotak}
+              onPress={() => navigation.navigate('Service')}>
               <Image source={wrench} />
               <Text style={styles.titleicon}>Service</Text>
             </TouchableOpacity>
@@ -73,6 +76,34 @@ const Beranda = () => {
             </TouchableOpacity>
           </SafeAreaView>
         </SafeAreaView>
+        <TouchableOpacity style={styles.boxmotor}>
+          <SafeAreaView>
+            <Text>Vario 160 ABS</Text>
+            <Text>Blaster</Text>
+            <Text>BE 2411 AGS</Text>
+            <Text>Terakhir Servis</Text>
+            <SafeAreaView style={{flexDirection: 'row'}}>
+              <MaterialCommunityIcons
+                name="calendar-blank-outline"
+                color={'#000000'}
+                size={24}
+              />
+              <Text>17 Nov 2022</Text>
+            </SafeAreaView>
+            <Text>Servis selanjutnya</Text>
+            <SafeAreaView style={{flexDirection: 'row'}}>
+              <MaterialCommunityIcons
+                name="calendar-blank-outline"
+                color={'#000000'}
+                size={24}
+              />
+              <Text>17 Nov 2023</Text>
+            </SafeAreaView>
+          </SafeAreaView>
+          <SafeAreaView style={{marginLeft: 20, justifyContent: 'center'}}>
+            <Image source={Motor} />
+          </SafeAreaView>
+        </TouchableOpacity>
       </SafeAreaView>
     </SafeAreaView>
   );
@@ -146,5 +177,16 @@ const styles = StyleSheet.create({
   textbutton: {
     color: 'white',
     fontFamily: 'Poppins-SemiBold',
+  },
+  boxmotor: {
+    flexDirection: 'row',
+    padding: 20,
+    borderBottomWidth: 2,
+    borderRightWidth: 1,
+    borderLeftWidth: 1,
+    borderColor: 'gray',
+    borderRadius: 20,
+    justifyContent: 'center',
+    marginTop: 20,
   },
 });

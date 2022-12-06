@@ -5,6 +5,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
+import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import {
   Splash1,
   Splash2,
@@ -28,12 +29,30 @@ import {
   Service,
   DetailService,
   Sparepart,
+  Newspaper,
+  Otomotif,
+  Servicepaper,
+  DetailBerita,
 } from '../pages';
 
 const Stack = createNativeStackNavigator();
 
 const Tab = createBottomTabNavigator();
-
+const TopTab = createMaterialTopTabNavigator();
+function Berita() {
+  return (
+    <TopTab.Navigator
+      screenOptions={{
+        tabBarStyle: {backgroundColor: '#FF7A00'},
+        tabBarInactiveTintColor: '#fff',
+        tabBarActiveTintColor: '#fff',
+      }}>
+      <TopTab.Screen name="Newspaper" component={Newspaper} />
+      <TopTab.Screen name="Otomotif" component={Otomotif} />
+      <TopTab.Screen name="Servicepaper" component={Servicepaper} />
+    </TopTab.Navigator>
+  );
+}
 function HomeTab() {
   return (
     <Tab.Navigator
@@ -90,7 +109,6 @@ function HomeTab() {
           ),
         }}
       />
-			
     </Tab.Navigator>
   );
 }
@@ -100,7 +118,7 @@ const Router = () => {
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{headerShown: false}}
-        initialRouteName="Splash1">
+        initialRouteName="HomeTab">
         <Stack.Screen name="Splash1" component={Splash1} />
         <Stack.Screen name="Splash2" component={Splash2} />
         <Stack.Screen name="Splash3" component={Splash3} />
@@ -185,11 +203,31 @@ const Router = () => {
             headerTintColor: '#fff',
           }}
         />
-				<Stack.Screen
+        <Stack.Screen
           name="Sparepart"
           component={Sparepart}
           options={{
             title: 'Sparepart',
+            headerShown: true,
+            headerStyle: {backgroundColor: '#FF7A00'},
+            headerTintColor: '#fff',
+          }}
+        />
+        <Stack.Screen
+          name="Berita"
+          component={Berita}
+          options={{
+            title: 'Berita',
+            headerShown: true,
+            headerStyle: {backgroundColor: '#FF7A00'},
+            headerTintColor: '#fff',
+          }}
+        />
+				 <Stack.Screen
+          name="DetailBerita"
+          component={DetailBerita}
+          options={{
+            title: 'Berita',
             headerShown: true,
             headerStyle: {backgroundColor: '#FF7A00'},
             headerTintColor: '#fff',

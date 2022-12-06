@@ -16,6 +16,7 @@ import Oil from './Oil.png';
 import OilImage from './OilImage.png';
 import Sparepartimage from './Sparepartimage.png';
 import AccImage from './AccImage.png';
+import Berita from './Berita.png';
 export {
   Logo,
   Parking,
@@ -35,4 +36,5 @@ export {
   OilImage,
   Sparepartimage,
   AccImage,
+  Berita,
 };

@@ -20,6 +20,10 @@ import TambahMotor from './TambahMotor';
 import Service from './Service';
 import DetailService from './DetailService';
 import Sparepart from './Sparepart';
+import Newspaper from './Newspapper';
+import Otomotif from './Otomotif';
+import Servicepaper from './Servicepaper';
+import DetailBerita from './DetailBerita';
 export {
   Splash1,
   Splash2,
@@ -43,4 +47,8 @@ export {
   Service,
   DetailService,
   Sparepart,
+  Newspaper,
+  Otomotif,
+  Servicepaper,
+  DetailBerita,
 };

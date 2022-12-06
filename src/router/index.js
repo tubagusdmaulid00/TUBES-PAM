@@ -24,6 +24,7 @@ import {
   Bengkel,
   Aktivitas,
   Profile,
+	TambahMotor
 } from '../pages';
 
 const Stack = createNativeStackNavigator();
@@ -149,6 +150,16 @@ const Router = () => {
         <Stack.Screen
           name="FinalChangePassword"
           component={FinalChangePassword}
+        />
+				<Stack.Screen
+          name="TambahMotor"
+          component={TambahMotor}
+          options={{
+            title: 'Tambah Motor',
+            headerShown: true,
+            headerStyle: {backgroundColor: '#FF7A00'},
+            headerTintColor: '#fff',
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>

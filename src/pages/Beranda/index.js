@@ -15,8 +15,10 @@ import {
   scooter,
 } from '../../assets';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import {useNavigation} from '@react-navigation/native';
 
 const Beranda = () => {
+  const navigation = useNavigation();
   return (
     <SafeAreaView style={styles.page}>
       <SafeAreaView style={styles.header}>
@@ -27,7 +29,7 @@ const Beranda = () => {
             position: 'absolute',
             width: '100%',
           }}>
-          <Text style={{color: 'white', alignSelf: 'center'}}>Hai, Nama </Text>
+          <Text style={{color: 'white'}}>Hai, Nama </Text>
         </SafeAreaView>
         <SafeAreaView style={styles.image}>
           <Image source={Logo} style={styles.logo} />
@@ -64,7 +66,9 @@ const Beranda = () => {
             <Text style={styles.textbox}>
               Silahkan Tambah Motor Terlebih Dahulu
             </Text>
-            <TouchableOpacity style={styles.buttontambah}>
+            <TouchableOpacity
+              style={styles.buttontambah}
+              onPress={() => navigation.navigate('TambahMotor')}>
               <Text style={styles.textbutton}>Tambah Motor</Text>
             </TouchableOpacity>
           </SafeAreaView>

@@ -16,6 +16,7 @@ import Beranda from './Beranda';
 import Bengkel from './Bengkel';
 import Aktivitas from './Aktivitas';
 import Profile from './Profile';
+import TambahMotor from './TambahMotor';
 export {
   Splash1,
   Splash2,
@@ -35,4 +36,5 @@ export {
   Bengkel,
   Aktivitas,
   Profile,
+  TambahMotor,
 };

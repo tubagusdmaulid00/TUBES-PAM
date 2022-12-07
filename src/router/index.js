@@ -83,6 +83,10 @@ function HomeTab() {
               size={size}
             />
           ),
+						title: 'Aktivitas',
+            headerShown: true,
+            headerStyle: {backgroundColor: '#FF7A00'},
+            headerTintColor: '#fff',
         }}
       />
       <Tab.Screen

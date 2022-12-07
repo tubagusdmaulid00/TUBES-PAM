@@ -3,4 +3,5 @@ import Input from './Input';
 import ViewOil from './ViewOil';
 import ViewSparepart from './ViewSparepart';
 import ViewAcc from './ViewAcc';
-export {Splash, Input, ViewOil, ViewSparepart, ViewAcc};
+import Activity from './Activity';
+export {Splash, Input, ViewOil, ViewSparepart, ViewAcc, Activity};

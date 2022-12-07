@@ -10,12 +10,14 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@pietile-native-kit/expandable-view": "^1.2.0",
     "@react-navigation/bottom-tabs": "^6.4.3",
     "@react-navigation/material-top-tabs": "^6.4.0",
     "@react-navigation/native": "^6.0.16",
     "@react-navigation/native-stack": "^6.9.4",
     "react": "18.1.0",
     "react-native": "0.70.6",
+    "react-native-accordion-list-view": "^1.0.4",
     "react-native-pager-view": "^6.1.2",
     "react-native-radio-buttons-group": "^2.2.11",
     "react-native-safe-area-context": "^4.4.1",

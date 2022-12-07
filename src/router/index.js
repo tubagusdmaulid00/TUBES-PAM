@@ -33,6 +33,12 @@ import {
   Otomotif,
   Servicepaper,
   DetailBerita,
+  EditProfile,
+  UbahPassword,
+  UbahPasswordv2,
+  KonfirmasiUbahPassword,
+  ChangePasswordUbahPassword,
+  FinalUbahPassword,
 } from '../pages';
 
 const Stack = createNativeStackNavigator();
@@ -240,6 +246,60 @@ const Router = () => {
             headerStyle: {backgroundColor: '#FF7A00'},
             headerTintColor: '#fff',
           }}
+        />
+        <Stack.Screen
+          name="EditProfile"
+          component={EditProfile}
+          options={{
+            title: 'Profile',
+            headerShown: true,
+            headerStyle: {backgroundColor: '#FF7A00'},
+            headerTintColor: '#fff',
+          }}
+        />
+				<Stack.Screen
+          name="UbahPassword"
+          component={UbahPassword}
+          options={{
+            title: 'Ubah Password',
+            headerShown: true,
+            headerStyle: {backgroundColor: '#FF7A00'},
+            headerTintColor: '#fff',
+          }}
+        />
+        <Stack.Screen
+          name="UbahPasswordv2"
+          component={UbahPasswordv2}
+          options={{
+            title: 'Ubah Password',
+            headerShown: true,
+            headerStyle: {backgroundColor: '#FF7A00'},
+            headerTintColor: '#fff',
+          }}
+        />
+        <Stack.Screen
+          name="KonfirmasiUbahPassword"
+          component={KonfirmasiUbahPassword}
+          options={{
+            title: 'Konfirmasi',
+            headerShown: true,
+            headerStyle: {backgroundColor: '#FF7A00'},
+            headerTintColor: '#fff',
+          }}
+        />
+        <Stack.Screen
+          name="ChangePasswordUbahPassword"
+          component={ChangePasswordUbahPassword}
+          options={{
+            title: 'Password Baru',
+            headerShown: true,
+            headerStyle: {backgroundColor: '#FF7A00'},
+            headerTintColor: '#fff',
+          }}
+        />
+        <Stack.Screen
+          name="FinalUbahPassword"
+          component={FinalUbahPassword}
         />
       </Stack.Navigator>
     </NavigationContainer>

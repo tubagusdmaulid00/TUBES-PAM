@@ -24,6 +24,12 @@ import Newspaper from './Newspapper';
 import Otomotif from './Otomotif';
 import Servicepaper from './Servicepaper';
 import DetailBerita from './DetailBerita';
+import EditProfile from './EditProfile';
+import UbahPassword from './UbahPassword';
+import UbahPasswordv2 from './UbahPasswordv2';
+import KonfirmasiUbahPassword from './KonfirmasiUbahPassword';
+import ChangePasswordUbahPassword from './ChangePasswordUbahPassword';
+import FinalUbahPassword from './FinalUbahPassword';
 export {
   Splash1,
   Splash2,
@@ -51,4 +57,10 @@ export {
   Otomotif,
   Servicepaper,
   DetailBerita,
+  EditProfile,
+  UbahPassword,
+  UbahPasswordv2,
+  KonfirmasiUbahPassword,
+  ChangePasswordUbahPassword,
+  FinalUbahPassword,
 };

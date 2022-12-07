@@ -19,7 +19,9 @@ import {
   notes,
   logout,
 } from '../../assets';
+import {useNavigation} from '@react-navigation/native';
 const Profile = () => {
+  const navigation = useNavigation();
   return (
     <SafeAreaView style={styles.page}>
       <SafeAreaView style={styles.header}>
@@ -50,7 +52,9 @@ const Profile = () => {
               style={{alignItems: 'flex-end'}}
             />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.optionbutton}>
+          <TouchableOpacity
+            style={styles.optionbutton}
+            onPress={() => navigation.navigate('UbahPassword')}>
             <SafeAreaView style={styles.boxtitle}>
               <Image source={lock} />
               <Text style={styles.textoption}>Ubah Password</Text>
@@ -62,7 +66,9 @@ const Profile = () => {
               style={{alignItems: 'flex-end'}}
             />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.optionbutton}>
+          <TouchableOpacity
+            style={styles.optionbutton}
+            onPress={() => navigation.navigate('EditProfile')}>
             <SafeAreaView style={styles.boxtitle}>
               <Image source={edit} />
               <Text style={styles.textoption}>Edit Profile</Text>

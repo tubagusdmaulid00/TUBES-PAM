@@ -17,6 +17,16 @@ import OilImage from './OilImage.png';
 import Sparepartimage from './Sparepartimage.png';
 import AccImage from './AccImage.png';
 import Berita from './Berita.png';
+import star from './star.png';
+import user from './user.png';
+import padlock from './padlock.png';
+import token from './token.png';
+import iconmotorcycle from './iconmotorcycle.png';
+import lock from './lock.png';
+import edit from './edit.png';
+import iconwrench from './iconwrench.png';
+import notes from './notes.png';
+import logout from './logout.png';
 export {
   Logo,
   Parking,
@@ -37,4 +47,14 @@ export {
   Sparepartimage,
   AccImage,
   Berita,
+  star,
+  user,
+  padlock,
+  token,
+  iconmotorcycle,
+  lock,
+  edit,
+  iconwrench,
+  notes,
+  logout,
 };

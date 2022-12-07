@@ -83,10 +83,10 @@ function HomeTab() {
               size={size}
             />
           ),
-						title: 'Aktivitas',
-            headerShown: true,
-            headerStyle: {backgroundColor: '#FF7A00'},
-            headerTintColor: '#fff',
+          title: 'Aktivitas',
+          headerShown: true,
+          headerStyle: {backgroundColor: '#FF7A00'},
+          headerTintColor: '#fff',
         }}
       />
       <Tab.Screen
@@ -97,6 +97,10 @@ function HomeTab() {
           tabBarIcon: ({color, size}) => (
             <SimpleLineIcons name="location-pin" color={color} size={size} />
           ),
+          title: 'Bengkel',
+          headerShown: true,
+          headerStyle: {backgroundColor: '#FF7A00'},
+          headerTintColor: '#fff',
         }}
       />
       <Tab.Screen
@@ -227,7 +231,7 @@ const Router = () => {
             headerTintColor: '#fff',
           }}
         />
-				 <Stack.Screen
+        <Stack.Screen
           name="DetailBerita"
           component={DetailBerita}
           options={{

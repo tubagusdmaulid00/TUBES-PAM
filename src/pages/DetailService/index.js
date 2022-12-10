@@ -1,12 +1,31 @@
 import React, {useState} from 'react';
-import {SafeAreaView, StyleSheet, Text, Button} from 'react-native';
+import {
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  Button,
+  TouchableOpacity,
+} from 'react-native';
 import {Input} from '../../components';
 import {useNavigation} from '@react-navigation/native';
+import DatePicker from 'react-native-date-picker';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const DetailService = () => {
   const navigation = useNavigation();
   const [lokasi, onChangeLokasi] = useState('');
   const [keluhan, onChangeKeluhan] = useState('');
+  const [date, setDate] = useState(new Date());
+  const [open, setOpen] = useState(false);
+  const [viewdate, setViewDate] = useState('Pilih Jadwal');
+
+  const gantiviewtanggal = data => {
+    setDate(data);
+    setViewDate(
+      data.getDate() + '/' + data.getMonth() + '/' + data.getFullYear(),
+    );
+  };
+
   return (
     <SafeAreaView style={styles.page}>
       <Input
@@ -16,6 +35,40 @@ const DetailService = () => {
         showtitle={true}
         name={'Lokasi Service'}
       />
+      <DatePicker
+        modal
+        open={open}
+        date={date}
+        mode={'date'}
+        onConfirm={date => {
+          setOpen(false);
+          gantiviewtanggal(date);
+        }}
+        onCancel={() => {
+          setOpen(false);
+        }}
+      />
+      <SafeAreaView style={styles.boxcalendar}>
+        <Text style={{fontWeight: 'bold', color: 'gray'}}>
+          Jadwal Service
+        </Text>
+        <SafeAreaView style={styles.calendar}>
+          <Text
+            style={{
+              color: 'black',
+              fontFamily: 'Poppins-Medium',
+            }}>
+            {viewdate}
+          </Text>
+          <TouchableOpacity onPress={() => setOpen(true)}>
+            <MaterialCommunityIcons
+              name="calendar-blank-outline"
+              color={'#000000'}
+              size={24}
+            />
+          </TouchableOpacity>
+        </SafeAreaView>
+      </SafeAreaView>
       <Input
         value={keluhan}
         onChangeText={onChangeKeluhan}
@@ -23,6 +76,7 @@ const DetailService = () => {
         showtitle={true}
         name={'Keluhan'}
       />
+
       <SafeAreaView style={styles.footer}>
         <Button
           style={styles.button}
@@ -46,5 +100,16 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-end',
     marginBottom: 10,
+  },
+  calendar: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 10,
+  },
+  boxcalendar: {
+    marginHorizontal: 30,
+    borderBottomWidth: 1,
+    paddingBottom: 5,
+    marginTop: 20,
   },
 });

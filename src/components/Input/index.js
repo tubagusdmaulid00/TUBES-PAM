@@ -13,7 +13,7 @@ const Input = ({
   return (
     <View style={{marginTop: 20}}>
       {showtitle && (
-        <Text style={{marginLeft: 30, fontWeight: 'bold'}}>{name}</Text>
+        <Text style={{marginLeft: 30, fontWeight: 'bold',color:'gray'}}>{name}</Text>
       )}
       <View style={styles.textinput}>
         <TextInput
